@@ -47,4 +47,3 @@ const getCurrentUserLocation = () => {
                     .then(data => data.location)
     return response
 }
-console.log(getCurrentUserLocation());
