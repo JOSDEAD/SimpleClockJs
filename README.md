@@ -13,5 +13,5 @@
 
 ## Screenshots
 
-![Desktop view](https://github.com/JOSDEAD/SimpleClockJs/blob/master/simple-clock-js-desktop.jpg)
-![Mobile View](https://github.com/JOSDEAD/SimpleClockJs/blob/master/simple-clock-js-phone.jpg)
+![Desktop view](https://github.com/JOSDEAD/SimpleClockJs/blob/main/simple-clock-js-desktop.jpg)
+![Mobile View](https://github.com/JOSDEAD/SimpleClockJs/blob/main/simple-clock-js-phone.jpg)
