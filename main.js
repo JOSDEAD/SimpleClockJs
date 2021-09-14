@@ -1,14 +1,17 @@
+const API = 'https://geo.ipify.org/api/v1';
+const KEY = 'at_Z6jdPtr9T5R2p6ZgZ0hKRVx6Sq7Js'; 
 window.addEventListener(
   "load",
-  function () {
+  async function () {
     const secondsHand = this.document.querySelector(".second-hand");
     const minutesHand = this.document.querySelector(".min-hand");
     const hourHand = this.document.querySelector(".hour-hand");
     const hours = this.document.querySelector(".hours");
     const minutes = this.document.querySelector(".minutes");
-
     const seconds = this.document.querySelector(".seconds");
-
+    const location = this.document.querySelector(".location");
+    const {city,country} = await getCurrentUserLocation()
+    location.textContent = `${city}, ${country}`
     setInterval(
       () =>
         setTime(secondsHand, minutesHand, hourHand, hours, minutes, seconds),
@@ -38,3 +41,10 @@ const setTime = (
   minutes.textContent = `${addZero(currentMinutes)}:`;
   seconds.textContent = `${addZero(currentSeconds)}`;
 };
+const getCurrentUserLocation = () => {
+    const response =  fetch(`${API}?apiKey=${KEY}`)
+                    .then((response) => response.json())
+                    .then(data => data.location)
+    return response
+}
+console.log(getCurrentUserLocation());
